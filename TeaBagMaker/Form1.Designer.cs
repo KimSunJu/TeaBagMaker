@@ -35,6 +35,7 @@
             this.lb = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtCountDown = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // cb
@@ -49,6 +50,7 @@
             // timer
             // 
             this.timer.Interval = 1000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // but
             // 
@@ -58,6 +60,7 @@
             this.but.TabIndex = 1;
             this.but.Text = "담그기!";
             this.but.UseVisualStyleBackColor = true;
+            this.but.Click += new System.EventHandler(this.but_Click);
             // 
             // lb
             // 
@@ -86,11 +89,21 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "3602김선주";
             // 
+            // txtCountDown
+            // 
+            this.txtCountDown.Location = new System.Drawing.Point(97, 70);
+            this.txtCountDown.Name = "txtCountDown";
+            this.txtCountDown.ReadOnly = true;
+            this.txtCountDown.Size = new System.Drawing.Size(82, 21);
+            this.txtCountDown.TabIndex = 5;
+            this.txtCountDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(323, 176);
+            this.Controls.Add(this.txtCountDown);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lb);
@@ -114,6 +127,7 @@
         private System.Windows.Forms.Label lb;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtCountDown;
     }
 }
 
